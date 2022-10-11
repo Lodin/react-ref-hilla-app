@@ -5,7 +5,9 @@
 // For more information about the configurations, please refer to http://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "jsx": "react-jsx",
     "inlineSources": true,
     "module": "esNext",
     "target": "es2020",
@@ -27,7 +29,7 @@
     }
   },
   "include": [
-    "frontend/**/*.ts",
+    "frontend/**/*.tsx?",
     "frontend/index.js",
     "types.d.ts"
   ],
