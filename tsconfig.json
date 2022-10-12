@@ -29,8 +29,7 @@
     }
   },
   "include": [
-    "frontend/**/*.tsx?",
-    "frontend/index.js",
+    "frontend/**/*",
     "types.d.ts"
   ],
   "exclude": []

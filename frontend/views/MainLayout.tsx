@@ -3,11 +3,9 @@ import React, { PropsWithChildren, ReactElement, useReducer } from 'react';
 import { Outlet, useHref, useLocation, useNavigate } from 'react-router-dom';
 import { AppLayout, DrawerToggle } from 'react-vaadin-components/dist/components/AppLayout.js';
 import { Scroller } from 'react-vaadin-components/dist/components/Scroller.js';
-import { viewAdditionalInfoMap, views } from '../routes';
 import { Nav, NavItem } from '../thirdParty.js';
 import { defaultState, LocationContext, reducer } from './locationStore.js';
-
-const usedViews = views.filter(({ path }) => !!viewAdditionalInfoMap[path]?.title);
+import views from './views.js';
 
 type NavLinkProps = Readonly<{
   icon?: string;
@@ -38,7 +36,7 @@ export default function MainLayout(): ReactElement<unknown> | null {
   const [state, dispatch] = useReducer(reducer, {
     ...defaultState,
     path: pathname,
-    title: viewAdditionalInfoMap[pathname]?.title ?? '',
+    title: views[pathname]?.title ?? '',
   });
 
   const context = {
@@ -54,10 +52,9 @@ export default function MainLayout(): ReactElement<unknown> | null {
         </header>
         <Scroller slot="drawer" scroll-direction="vertical">
           <Nav aria-label={state.appName}>
-            {usedViews.map((view) => {
-              const info = viewAdditionalInfoMap[view.path];
-              return <NavLink key={view.path} icon={info?.icon} path={view.path} title={info?.title} />;
-            })}
+            {Object.entries(views).map(([path, info]) => (
+              <NavLink key={path} path={path} {...info} />
+            ))}
           </Nav>
         </Scroller>
         <footer slot="drawer"></footer>

@@ -147,6 +147,7 @@
     "mkdirp": "1.0.4",
     "prettier": "^2.7.1",
     "rollup-plugin-brotli": "3.1.0",
+    "sass": "^1.55.0",
     "transform-ast": "2.4.4",
     "typescript": "4.7.4",
     "vite": "v3.1.0",
@@ -431,6 +432,6 @@
       "workbox-core": "6.5.0",
       "workbox-precaching": "6.5.0"
     },
-    "hash": "c1eb526d6a05e6de8992dfef5d2dec2356b8337795d103896a0ed37739cd1ca1"
+    "hash": "093ebffede352e82f6687be5ed42d02c20ebd600e45fa8dba2dd576a662b4b76"
   }
 }

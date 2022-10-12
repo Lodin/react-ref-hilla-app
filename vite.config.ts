@@ -1,4 +1,4 @@
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
 import { UserConfigFn } from 'vite';
 import { overrideVaadinConfig } from './vite.generated';
 
@@ -7,9 +7,9 @@ const customConfig: UserConfigFn = (env) => ({
   // https://vitejs.dev/config/
   plugins: [
     react({
-      include: '**/*.tsx'
+      include: '**/*.tsx',
     }),
-  ]
+  ],
 });
 
 export default overrideVaadinConfig(customConfig);
