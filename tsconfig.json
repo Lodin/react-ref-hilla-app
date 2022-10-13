@@ -21,6 +21,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "experimentalDecorators": true,
+    "importsNotUsedAsValues": "error",
     "baseUrl": "frontend",
     "paths": {
       "Frontend/*": [

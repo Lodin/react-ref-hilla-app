@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React, { PropsWithChildren, ReactElement, useReducer } from 'react';
+import { PropsWithChildren, ReactElement, useReducer } from 'react';
 import { Outlet, useHref, useLocation, useNavigate } from 'react-router-dom';
 import { AppLayout, DrawerToggle } from 'react-vaadin-components/dist/components/AppLayout.js';
 import { Scroller } from 'react-vaadin-components/dist/components/Scroller.js';

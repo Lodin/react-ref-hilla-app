@@ -1,9 +1,9 @@
 import HelloWorldView from 'Frontend/views/helloworld/HelloWorldView.js';
-import React, { Suspense } from 'react';
-import { createBrowserRouter, RouteObject } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from './views/MainLayout.js';
 
-const AboutView = React.lazy(async () => import('./views/about/AboutView'));
+const AboutView = lazy(async () => import('./views/about/AboutView'));
 
 const router = createBrowserRouter([
   {

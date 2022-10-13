@@ -1,11 +1,11 @@
 import cn from 'classnames';
 import * as HelloWorldEndpoint from 'Frontend/generated/HelloWorldEndpoint';
-import React, { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { Button, Notification, TextField } from 'react-vaadin-components';
 import css from './HelloWorld.module.scss';
 import img from './placeholder.avif';
 
-export default function HelloWorldView(): React.ReactElement<unknown> | null {
+export default function HelloWorldView(): ReactElement<unknown> | null {
   const [name, setName] = useState('');
 
   return (

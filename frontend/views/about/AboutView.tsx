@@ -1,7 +1,7 @@
 import cn from 'classnames';
-import React from 'react';
+import type { ReactElement } from 'react';
 
-export default function AboutView(): React.ReactElement<unknown> | null {
+export default function AboutView(): ReactElement<unknown> | null {
   return (
     <div
       className={cn('flex', 'flex-col', 'h-full', 'items-center', 'justify-center', 'p-l', 'text-center', 'box-border')}
