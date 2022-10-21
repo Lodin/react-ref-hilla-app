@@ -1,9 +1,6 @@
-import HelloWorldView from 'Frontend/views/helloworld/HelloWorldView.js';
-import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import GroceryView from './views/grocery/GroceryView.js';
 import MainLayout from './views/MainLayout.js';
-
-const AboutView = lazy(async () => import('./views/about/AboutView'));
 
 const router = createBrowserRouter([
   {
@@ -11,19 +8,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <HelloWorldView />,
+        element: <GroceryView />,
       },
       {
-        path: '/hello',
-        element: <HelloWorldView />,
-      },
-      {
-        path: '/about',
-        element: (
-          <Suspense fallback={<div>Loading...</div>}>
-            <AboutView />
-          </Suspense>
-        ),
+        path: '/groceries',
+        element: <GroceryView />,
       },
     ],
   },
