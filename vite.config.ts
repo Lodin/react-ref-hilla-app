@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { UserConfigFn } from 'vite';
+import type { UserConfigFn } from 'vite';
 import { overrideVaadinConfig } from './vite.generated';
 
 const customConfig: UserConfigFn = (env) => ({
